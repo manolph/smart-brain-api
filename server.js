@@ -34,5 +34,5 @@ app.put('/image', auth.requireAuth, (req, res) => { image.handleImage(req, res, 
 app.post('/imageurl', auth.requireAuth, (req, res) => { image.handleApiCall(req, res)})
 
 app.listen(process.env.PORT || 3000, ()=> {
-  console.log(`app is running on port 3000 ${PORT}`);
+  console.log(`app is running on port ${process.env.PORT}`);
 })
